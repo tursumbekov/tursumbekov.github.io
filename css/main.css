@@ -3532,7 +3532,13 @@ ul {
   margin-left: 3px;
   padding: 7px 26px 7px 5px;
   line-height: 20px;
-  font-size: 14px; }
+  font-size: 14px;
+  text-decoration: none;
+  color: #0052cc; }
+  .main-aside .nav-links li .nav-link:hover {
+    color: #0065ff;
+    outline: 0;
+    text-decoration: underline; }
 
 .info-wrapper {
   padding-top: 10px; }
