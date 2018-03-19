@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width">
 		<title>
 		</title>
-		<link rel="stylesheet" href="css/main.css?v=1521418265621">
+		<link rel="stylesheet" href="css/main.css?v=1521419565750">
 	</head>
 	<body>
 		<div class="grid-x">
@@ -146,7 +146,7 @@
 									<div class="downloads">1.7k installs</div>
 								</div></a>
 							<div class="item subscribe">
-								<div class="sub-title">The latest app updates delivered to your inbox.</div><a class="subscribe-button" href="#">Subscribe</a>
+								<div class="sub-title">The latest app updates delivered to your inbox.</div><a class="subscribe-button" href="#subscribe-modal" data-fancybox>Subscribe</a>
 							</div>
 						</div>
 						<h2>Top-selling apps</h2>
@@ -412,7 +412,7 @@
 					</div>
 					<div class="cell large-3">
 						<div class="nav-title mail-title">Email updates</div>
-						<p>Get latest app recommendations by email.</p><a class="subscribe-button" href="#">Subscribe</a>
+						<p>Get latest app recommendations by email.</p><a class="subscribe-button" href="#subscribe-modal" data-fancybox>Subscribe</a>
 					</div>
 				</div>
 			</div>
@@ -429,8 +429,19 @@
 				</div>
 			</div>
 		</div>
-		<script src="js/vendor.js?v=1521418265622"></script>
-		<script src="js/main.js?v=1521418265622"></script>
+		<div class="subscribe-modal" id="subscribe-modal">
+			<div class="subscribe-modal-container"><img src="https://marketplace-cdn.atlassian.com/s/85c96bf61f9c2457a8edb92ffe8844e60ea9ad2c/public/communication.svg">
+				<div class="content-wrap">
+					<h3>Choose the subscription that fits your team</h3>
+					<form>
+						<input class="mail" placeholder="Email" required>
+						<button class="submit">Subscribe now</button>
+					</form><span class="close" data-fancybox-close>Cancel</span>
+				</div>
+			</div>
+		</div>
+		<script src="js/vendor.js?v=1521419565750"></script>
+		<script src="js/main.js?v=1521419565750"></script>
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 	</body>
 </html>
