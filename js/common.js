@@ -12,4 +12,7 @@ $(function() {
 		fade: true,
 		arrows: false
 	});
+
+	$('.desc').addClass('active');
+
 });
