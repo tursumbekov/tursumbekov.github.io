@@ -98,7 +98,12 @@ b, strong {
 	justify-content: center;
 	align-items: center;
 	&.langs {
-		justify-content: space-between;
+		justify-content: flex-end;
+		//.search-icon,
+		.lang {
+			display: inline-block;
+			margin-left: 20px;
+		}
 	}
 	a {
 		color: #fff;
@@ -281,12 +286,17 @@ b, strong {
 }
 
 
-.page-inside {
+.page-inside,
+.page-artist {
 	.city-inside {
 		height: 600px;
 		background: url("../img/london-inside.jpg") 50% 50% no-repeat;
 		background-size: cover;
 		z-index: -1;
+		&.artist-inside {
+			background: url("../img/artist-bg.jpg") 50% 50% no-repeat;
+			background-size: cover;
+		}
 	}
 	h1 {
 		font-size: 45px;
@@ -362,6 +372,18 @@ b, strong {
 				transform: translateX(10px);
 			}
 		}
+		.artists-links {
+			font-size: 18px;
+			margin-bottom: 30px;
+		}
+		.artist-link {
+			display: block;
+			margin-bottom: 10px;
+			color: #363636;
+			&.active {
+				font-weight: 700;
+			}
+		}
 	}
 	.events {
 		padding: 0 0 60px;
@@ -386,6 +408,18 @@ b, strong {
 			flex-wrap: wrap;
 			margin: 30px -20px 0;
 		}
+	}
+	.slider-nav {
+		.slick-current {
+			border: 1px solid #000;
+		}
+	}
+	.artist-description {
+		margin: 50px 0;
+	}
+	.artist-photo {
+		margin-top: 50px;
+		max-width: 100%;
 	}
 }
 
