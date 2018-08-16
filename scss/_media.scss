@@ -77,6 +77,16 @@
   }
   .page-inside,
   .page-artist {
+    h2 {
+      padding: 0 10px;
+    }
+    .loc-text,
+    .artists-desc,
+    .artists-desc {
+      p {
+        padding: 0 10px;
+      }
+    }
     .events {
       .event {
         max-width: 45%;
@@ -111,6 +121,10 @@
         margin-top: 140px;
       }
     }
+    h3,
+    p {
+      padding: 0 10px;
+    }
     .artists {
       padding-bottom: 0;
       .artists-links {
@@ -121,6 +135,12 @@
       display: flex;
       justify-content: center;
     }
+  }
+  .timeline-container {
+    padding-top: 60px;
+  }
+  .roadmap.roadmap--orientation-auto .roadmap__events__event:nth-child(odd) .event {
+    top: -15px;
   }
 }
 

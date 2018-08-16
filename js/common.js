@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
   $('.slider').slick({
     infinite: true,
@@ -45,6 +45,54 @@ $(function() {
     asNavFor: '.slider-inside-kur',
     focusOnSelect: true,
     arrows: false
+  });
+
+  var myEvents = [
+    {
+      date: 'Q1 - 2017',
+      content: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      date: 'Q2 - 2017',
+      content: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      date: 'Q3 - 2017',
+      content: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      date: 'Q3 - 2018',
+      content: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      date: 'Q3 - 2018',
+      content: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      date: 'Q3 - 2018',
+      content: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      date: 'Q3 - 2018',
+      content: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      date: 'Q3 - 2018',
+      content: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      date: 'Q3 - 2018',
+      content: 'Lorem ipsum dolor sit amet'
+    },
+    {
+      date: 'Q3 - 2018',
+      content: 'Lorem ipsum dolor sit amet'
+    }
+  ];
+  $('#my-timeline').roadmap(myEvents, {
+    eventsPerSlide: 4,
+    prevArrow: '<i class="material-icons">keyboard_arrow_left</i>',
+    nextArrow: '<i class="material-icons">keyboard_arrow_right</i>'
   });
 
 });
