@@ -75,6 +75,11 @@
       padding: 0 10px;
     }
   }
+  .news-container {
+    .slider-item {
+      padding: 30px 40px;
+    }
+  }
   .page-inside,
   .page-artist {
     h2 {
@@ -90,7 +95,7 @@
     .events {
       .event {
         max-width: 45%;
-        padding: 0;
+        padding: 0 0 20px;
         &:nth-child(2n +1) {
           margin-right: 10%;
         }
