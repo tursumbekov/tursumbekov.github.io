@@ -75,4 +75,21 @@ $(function () {
 		nextArrow: '<span class="slick-next"></span>'
 	});
 
+	$('.partners-slider').slick({
+		infinite: true,
+		slidesToShow: 3,
+		prevArrow: '<span class="slick-prev"></span>',
+		nextArrow: '<span class="slick-next"></span>',
+    responsive: [
+      {
+        breakpoint: 728,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      },
+    ]
+	});
+
 });
