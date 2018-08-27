@@ -1,194 +1,51 @@
 @import "vars";
 
 
+@media (max-width: 992px) {
+
+}
+
 /*==========  Desktop First  ==========*/
-
-// ≥1200px
-@include media-breakpoint-down(lg) {
-
-}
-
-// ≥992px
-@include media-breakpoint-down(md) {
-
-}
-
-// ≥768px
-@include media-breakpoint-down(sm) {
-
-}
-
-// ≥576px
-@include media-breakpoint-down(xs) {
-  .header {
-    .sponsor-logo {
-      margin-left: 0;
-      margin-bottom: 30px;
-      justify-content: space-between;
-    }
-    .sponsors-block {
-      display: flex;
-      justify-content: space-between;
-    }
-    .social-block {
-      display: none;
-    }
-  }
-  .nav-menu {
-    padding: 20px 10px 0;
-  }
-  .nav-item-link {
-    display: none;
-  }
-  .footer {
-    .left-block {
-      align-items: center;
-      margin-bottom: 20px;
-    }
-    .social-block {
-      margin-top: 20px;
-    }
-    .address {
-      text-align: center;
-    }
-  }
-  .page-inside {
-    .location {
-      img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 20px;
-      }
-    }
-  }
-  .project-desc {
-    h2 {
-      padding: 0 10px;
-    }
-    p {
-      padding: 0 10px;
-    }
-  }
-  .partners {
-    .partner-item,
-    h2 {
-      padding: 0 10px;
-    }
-  }
-  .news-container {
-    .slider-item {
-      padding: 30px 40px;
-    }
-  }
-  .page-inside,
-  .page-artist {
-    h2 {
-      padding: 0 10px;
-    }
-    .loc-text,
-    .artists-desc,
-    .artists-desc {
-      p {
-        padding: 0 10px;
-      }
-    }
-    .events {
-      .event {
-        max-width: 45%;
-        padding: 0 0 20px;
-        &:nth-child(2n +1) {
-          margin-right: 10%;
-        }
-      }
-      .events-grid {
-        margin: 30px 0 0;
-      }
-    }
-    .city-title {
-      margin-top: 20px;
-    }
-    .artists {
-      .artists-desc {
-        padding-right: 15px;
-      }
-      .slick-prev {
-        left: 0;
-      }
-      .slick-next {
-        right: 0;
-      }
-    }
-  }
-  .page-artist {
-    .city-inside {
-      height: 400px;
-      h1 {
-        margin-top: 140px;
-      }
-    }
-    h3,
-    p {
-      padding: 0 10px;
-    }
-    .artists {
-      padding-bottom: 0;
-      .artists-links {
-        text-align: center;
-      }
-    }
-    .artist-photo {
-      display: flex;
-      justify-content: center;
-    }
-  }
-  .timeline-container {
-    padding-top: 60px;
-  }
-  .roadmap.roadmap--orientation-auto .roadmap__events__event:nth-child(odd) .event {
-    top: -15px;
-  }
-  .page-inside {
-    .photo-slider {
-      .container {
-        padding-right: 0;
-        padding-left: 0;
-      }
-      .col-12 {
-        padding-left: 0;
-        padding-right: 0;
-      }
-      .slick-prev {
-        left: 0;
-      }
-      .slick-next {
-        right: 0;
-      }
-      .photo-slider-wrap {
-        margin: 0;
-      }
-    }
-  }
-}
-
-
-/*==========  Mobile First  ==========*/
-
-// ≤576px
-@include media-breakpoint-up(sm) {
-
-}
-
-// ≤768px
-@include media-breakpoint-up(md) {
-
-}
-
-// ≤992px
-@include media-breakpoint-up(lg) {
-
-}
-
-// ≤1200px
-@include media-breakpoint-up(xl) {
-
-}
+//
+//// ≥1200px
+//@include media-breakpoint-down(lg) {
+//
+//}
+//
+//// ≥992px
+//@include media-breakpoint-down(md) {
+//
+//}
+//
+//// ≥768px
+//@include media-breakpoint-down(sm) {
+//
+//}
+//
+//// ≥576px
+//@include media-breakpoint-down(xs) {
+//
+//}
+//
+//
+///*==========  Mobile First  ==========*/
+//
+//// ≤576px
+//@include media-breakpoint-up(sm) {
+//
+//}
+//
+//// ≤768px
+//@include media-breakpoint-up(md) {
+//
+//}
+//
+//// ≤992px
+//@include media-breakpoint-up(lg) {
+//
+//}
+//
+//// ≤1200px
+//@include media-breakpoint-up(xl) {
+//
+//}
