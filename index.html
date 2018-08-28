@@ -110,7 +110,7 @@
 		<div class="container">
 			<section class="baby-info row">
 				<div class="col-lg-12">
-					<form class="wrapper" id="main-form">
+					<form class="wrapper dropzone" id="main-form">
 
 						<div class="fieldset-block">
 							<h2 class="fieldset-title">Информация о маленьком герое</h2>
@@ -165,9 +165,9 @@
 								</div>
 							</div>
 
-							<div class="file-upload">
-								<input id="fileupload" type="file" name="files">
-								<div id="dropzone" class="fade well">Drop files here</div>
+							<!--<div class="dropzone" id="myDropzone"></div>-->
+							<div class="dropzone-area">
+								<input id="fileupload" type="file" name="file">
 							</div>
 						</div>
 
@@ -176,7 +176,7 @@
 
 							<div class="field-row clearfix">
 								<label class="radio field">
-									<input type="radio" name="achievement" value="1" checked>
+									<input type="radio" name="achievement" value="1">
 									<span class="radio-value">
 										Сделал первый шаг в будущее
 									</span>
@@ -309,11 +309,21 @@
 								</label>
 
 								<label class="radio field custom-radio">
-									<input type="radio" name="achievement">
+									<input type="radio" name="achievement" value="20">
 									<span class="radio-value">
 										Свой вариант
 									</span>
 								</label>
+							</div>
+							<div class="custom-radio-content">
+								<label for="custom-title">
+									Заголовок
+								</label>
+								<input id="custom-title" type="text" class="input form-control" placeholder="Заголовок">
+								<label for="custom-desc">
+									Описание новости
+								</label>
+								<textarea name="custom_desc" id="custom-desc" class="textarea form-control"></textarea>
 							</div>
 						</div>
 
@@ -321,9 +331,7 @@
 							<h2 class="fieldset-title">Новость почти готова!</h2>
 
 							<div class="news-content">
-								Лешенька сделал ПЕРВЫЙ ШАГ В БУДУЩЕЕ! <br>
-								Алексей Иванов (1 год, г. Астана) начал ходить. Исследователь не сидит
-								на месте – впереди миллионы новых открытий.
+								Выберете, пожалуйста, шаблон
 							</div>
 							<div class="field-row clearfix">
 								<div class="field">
@@ -336,7 +344,7 @@
 
 							<div class="button-wrap">
 								<!-- TODO -- e.prev -->
-								<button class="submit" onclick="return false">Отправить</button>
+								<button class="submit" id="submit-all">Отправить</button>
 							</div>
 						</div>
 					</form>
@@ -351,12 +359,14 @@
 				<div class="footer-inner">
 					<div class="welcome clearfix">
 						<p class="desc">
-							Добро пожаловать на страницу, где вы узнаете, как создать
+							<a href="https://maminclub.kz/products/huggies-elite-soft/">Добро пожаловать на страницу</a>, где вы узнаете, как создать
 							максимально комфортные условия для вашего малыша
 							и способствовать его новым открытиям, а значит,
 							и появлению свежих новостей!
 						</p>
-						<img src="img/pack.png" alt="Huggies" class="footer-pack">
+						<a href="https://maminclub.kz/products/huggies-elite-soft/">
+							<img src="img/pack.png" alt="Huggies" class="footer-pack">
+						</a>
 					</div>
 				</div>
 			</footer>

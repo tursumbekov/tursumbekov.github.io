@@ -4,22 +4,3 @@
 @import "../libs/bootstrap/_grid.scss";
 @import "../libs/bootstrap/_utilities.scss";
 @import "../libs/bootstrap/_forms.scss";
-
-#dropzone {
-  border: 1px dashed #ccc;
-  width: 100%;
-  height: 300px;
-  line-height: 200px;
-  text-align: center;
-  font-weight: bold;
-}
-#dropzone.in {
-  font-size: larger;
-}
-#dropzone.hover {
-  opacity: .8;
-}
-#dropzone.fade {
-  transition: all 0.3s ease-out;
-  opacity: 1;
-}
