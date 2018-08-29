@@ -33,27 +33,23 @@
 	<div class="main-header-wrap">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<header class="main-header">
-						<div class="row">
-							<div class="col-md-8 header-text">
-								<h1>
-									Huggies<sup>®</sup> считает, <br>
-									что достижение вашей крохи – <br>
-									главная новость, и о ней <br>
-									должен узнать весь мир!
-								</h1>
-								<p class="header-subtitle">
-									Ваш малыш научился ползать? Впервые взял
-									в руки ложку? Сделал первые шаги?
-								</p>
-								<p class="header-share">
-									Поделитесь этой новостью!
-								</p>
-							</div>
-						</div>
-					</header>
-				</div>
+				<header class="main-header">
+					<div class="header-text">
+						<h1>
+							Huggies<sup>®</sup> считает, <br>
+							что достижение вашей крохи – <br>
+							главная новость, и о ней <br>
+							должен узнать весь мир!
+						</h1>
+						<p class="header-subtitle">
+							Ваш малыш научился ползать? Впервые взял
+							в руки ложку? Сделал первые шаги?
+						</p>
+						<p class="header-share">
+							Поделитесь этой новостью!
+						</p>
+					</div>
+				</header>
 			</div>
 		</div>
 	</div>
@@ -61,7 +57,7 @@
 	<div class="instructions-wrapper">
 		<div class="container">
 			<section class="row">
-				<div class="col-md-12">
+				<div class="">
 					<div class="instructions">
 						<p class="title">
 							Указывайте информацию о маленьком герое, выбирайте шаблон новости
@@ -109,7 +105,7 @@
 	<div class="pattern-wrapper">
 		<div class="container">
 			<section class="baby-info row">
-				<div class="col-lg-12">
+				<div class="">
 					<form class="wrapper dropzone" id="main-form">
 
 						<div class="fieldset-block">
@@ -167,12 +163,16 @@
 
 							<!--<div class="dropzone" id="myDropzone"></div>-->
 							<div class="dropzone-area">
-								<input id="fileupload" type="file" name="file">
+								<!--<input id="fileupload" type="file" name="file">-->
+								<a class="magnific-link" href="#upload-rules">требования к фотографии</a>
 							</div>
 						</div>
 
 						<div class="fieldset-block achievements">
 							<h2 class="fieldset-title">Выберите достижение</h2>
+
+							<!--<a class="magnific-link" href="#upload-rules">Open popup</a>-->
+							<!--<a class="magnific-link" href="#upload-error">Open popup</a>-->
 
 							<div class="field-row clearfix">
 								<label class="radio field">
@@ -364,8 +364,8 @@
 							и способствовать его новым открытиям, а значит,
 							и появлению свежих новостей!
 						</p>
-						<a href="https://maminclub.kz/products/huggies-elite-soft/">
-							<img src="img/pack.png" alt="Huggies" class="footer-pack">
+						<a href="https://maminclub.kz/products/huggies-elite-soft/" class="footer-pack">
+							<img src="img/pack.png" alt="Huggies">
 						</a>
 					</div>
 				</div>
@@ -373,6 +373,46 @@
 		</div>
 	</div>
 
+</div>
+
+<div class="modals-container" style="display:none;">
+	<div id="upload-rules" class="upload-rules modal-content">
+		<div class="modal-wrap">
+			<div class="close-button"></div>
+			<ul>
+				<li><b>Допустимые форматы: jpg и png.</b></li>
+				<li><b>Размер файла – не более 5 Мб.</b></li>
+				<li>Фотография, которую Вы интегрируете в «новости», должна быть реальной
+					фотографией Вашего малыша.</li>
+				<li>Не допускается присутствие в кадре лиц кого-либо еще, кроме ребенка.</li>
+				<li>Не допускается фото в обнаженном виде. Если малыш одет в подгузник,
+					который заметен в кадре, это может быть только Huggies®.</li>
+				<li>Запрещена демонстрация в кадре визуально заметных логотипов торговых
+					марок, кроме Huggies®.</li>
+				<li>Ребенку на фотографии не должно быть больше трех лет.</li>
+				<li>Ребенок должен быть визуально здоровым (в том числе и имеющий
+					особенности развития).</li>
+				<li>Ребенок на фото должен быть бодрствующим (не спящим).</li>
+			</ul>
+		</div>
+	</div>
+	<div id="upload-error" class="upload-rules modal-content">
+		<div class="modal-wrap">
+			<div class="close-button"></div>
+			<div class="some-error">
+				Что-то пошло не так...
+			</div>
+			<p>
+				Возможно, вы заполнили не все поля или ваша фотография не соответствует
+				следующим требованиям:
+			</p>
+			<ul>
+				<li>допустимые форматы: jpg и png;</li>
+				<li>размер файла – не более 5 Мб..</li>
+			</ul>
+			<p style="margin-bottom: 0">Пожалуйста, устраните недочеты и попробуйте еще раз!</p>
+		</div>
+	</div>
 </div>
 
 	<script src="js/scripts.min.js"></script>

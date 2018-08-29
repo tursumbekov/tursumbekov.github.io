@@ -29,6 +29,15 @@ $(function() {
   //   }
   // }
 
+  $('.magnific-link').magnificPopup({
+    removalDelay: 300,
+    mainClass: 'mfp-fade'
+  });
+
+  $('.close-button').on('click', function () {
+    $.magnificPopup.close();
+  });
+
   var declOfNum = (function(){
     var cases = [2, 0, 1, 1, 1, 2];
     var declOfNumSubFunction = function(titles, number){
