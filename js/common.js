@@ -29,6 +29,56 @@ $(function() {
   //   }
   // }
 
+  $('.pre-hide').one('inview', function () {
+    $(this).removeClass('pre-hide');
+  });
+
+  var isAdvancedUpload = function() {
+    var div = document.createElement('div');
+    return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
+  }();
+
+  var $form = $('.box');
+
+  if (isAdvancedUpload) {
+    $form.addClass('has-advanced-upload');
+  }
+
+  // function readURL(input) {
+  //   var reader = new FileReader();
+  //   console.log('input', e.target.result);
+  //   $('#blah').attr('src', e.target.result);
+  //
+  //   reader.readAsDataURL(input.files[0]);
+  // }
+
+  if (isAdvancedUpload) {
+
+    var droppedFiles = false;
+
+    $form.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }).on('dragover dragenter', function() {
+      $form.addClass('is-dragover');
+    }).on('dragleave dragend drop', function() {
+      $form.removeClass('is-dragover');
+    }).on('drop', function(e) {
+      droppedFiles = e.originalEvent.dataTransfer.files;
+      $('.box__input').html('' +
+          '<label for="file" class="preview-wrap">' +
+          '<img id="output" src="' + URL.createObjectURL(droppedFiles[0]) + '"' +
+          '</label>');
+    });
+
+    $('#file').on('change', function (e) {
+      $('.box__input').html('' +
+          '<label for="file" class="preview-wrap">' +
+          '<img id="output" src="' + URL.createObjectURL(e.target.files[0]) + '"' +
+          '</label>');
+    });
+  }
+
   $('.magnific-link').magnificPopup({
     removalDelay: 300,
     mainClass: 'mfp-fade'

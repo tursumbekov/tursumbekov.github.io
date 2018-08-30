@@ -33,7 +33,7 @@
 	<div class="main-header-wrap">
 		<div class="container">
 			<div class="row">
-				<header class="main-header">
+				<header class="main-header pre-hide">
 					<div class="header-text">
 						<h1>
 							Huggies<sup>®</sup> считает, <br>
@@ -59,13 +59,13 @@
 			<section class="row">
 				<div class="">
 					<div class="instructions">
-						<p class="title">
+						<p class="title pre-hide">
 							Указывайте информацию о маленьком герое, выбирайте шаблон новости
 							и делитесь ею с друзьями и родными! <br>
 							Не забывайте поставить хэштег #babynews.<br>
 							Пусть малыши познают мир в объятиях Huggies<sup>®</sup>!
 						</p>
-						<div class="steps clearfix">
+						<div class="steps clearfix pre-hide">
 							<div class="step step-1">
 								<div class="image">
 									<div class="step-number">1</div>
@@ -108,7 +108,7 @@
 				<div class="">
 					<form class="wrapper dropzone" id="main-form">
 
-						<div class="fieldset-block">
+						<div class="fieldset-block pre-hide">
 							<h2 class="fieldset-title">Информация о маленьком герое</h2>
 
 							<div class="field-row clearfix">
@@ -161,18 +161,25 @@
 								</div>
 							</div>
 
-							<!--<div class="dropzone" id="myDropzone"></div>-->
-							<div class="dropzone-area">
-								<!--<input id="fileupload" type="file" name="file">-->
-								<a class="magnific-link" href="#upload-rules">требования к фотографии</a>
+							<div class="box dropzone-area">
+								<div class="box__input">
+									<img id="output">
+									<label for="file" class="file-label"><span class="file-choose">Выберите файл</span><span class="box__dragndrop"> или перетащите сюда</span>.</label>
+									<br>
+									<a class="magnific-link" href="#upload-rules">требования к фотографии</a>
+								</div>
+								<input class="box__file" type="file" name="files" id="file" />
 							</div>
 						</div>
 
-						<div class="fieldset-block achievements">
+						<div class="fieldset-block pre-hide achievements">
 							<h2 class="fieldset-title">Выберите достижение</h2>
 
-							<!--<a class="magnific-link" href="#upload-rules">Open popup</a>-->
-							<!--<a class="magnific-link" href="#upload-error">Open popup</a>-->
+							<a class="magnific-link" href="#upload-rules">Open popup</a>
+							<a class="magnific-link" href="#upload-error">Open popup</a>
+							<a class="magnific-link" href="#submit-success">Open popup</a>
+							<a class="magnific-link" href="#submit-success-40">Open popup</a>
+							<a class="magnific-link" href="#welcome-modal">Open popup</a>
 
 							<div class="field-row clearfix">
 								<label class="radio field">
@@ -261,7 +268,7 @@
 
 								<label class="radio field">
 									<input type="radio" name="achievement" value="13">
-									<span class="radio-value">
+									<span class="radio-value accent">
 										Отмечает первую важную дату
 									</span>
 								</label>
@@ -327,7 +334,7 @@
 							</div>
 						</div>
 
-						<div class="fieldset-block submit-wrap">
+						<div class="fieldset-block pre-hide submit-wrap">
 							<h2 class="fieldset-title">Новость почти готова!</h2>
 
 							<div class="news-content">
@@ -343,7 +350,6 @@
 							</div>
 
 							<div class="button-wrap">
-								<!-- TODO -- e.prev -->
 								<button class="submit" id="submit-all">Отправить</button>
 							</div>
 						</div>
@@ -357,9 +363,9 @@
 		<div class="container">
 			<footer class="row">
 				<div class="footer-inner">
-					<div class="welcome clearfix">
+					<div class="welcome clearfix pre-hide">
 						<p class="desc">
-							<a href="https://maminclub.kz/products/huggies-elite-soft/">Добро пожаловать на страницу</a>, где вы узнаете, как создать
+							<a href="https://maminclub.kz/products/huggies-elite-soft/" target="_blank">Добро пожаловать на страницу</a>, где вы узнаете, как создать
 							максимально комфортные условия для вашего малыша
 							и способствовать его новым открытиям, а значит,
 							и появлению свежих новостей!
@@ -411,6 +417,61 @@
 				<li>размер файла – не более 5 Мб..</li>
 			</ul>
 			<p style="margin-bottom: 0">Пожалуйста, устраните недочеты и попробуйте еще раз!</p>
+		</div>
+	</div>
+	<div id="submit-success" class="upload-rules modal-content">
+		<div class="modal-wrap">
+			<div class="close-button"></div>
+			<p class="modal-title">
+				Поздравляем с новым достижением малыша!
+			</p>
+			<p class="modal-block">
+				Ваша новость добавлена в очередь на модерацию. Одобрение модератора
+				может занять пару часов. Проведите это бесценное время с малышом! :)
+			</p>
+			<p>
+				Ссылка на публикацию придет Вам на е-мейл или на указанный номер
+				телефона. Модерация работает с 10.00 до 24.00. Если вы отправили заявку
+				в нерабочее время, то получите ссылку на следующий день.
+			</p>
+			<p style="margin-bottom: 0">
+				Делясь новостью, не забывайте про хэштег  #моймалышвновостях
+			</p>
+		</div>
+	</div>
+	<div id="submit-success-40" class="upload-rules modal-content submit-success-40">
+		<div class="modal-wrap clearfix">
+			<div class="close-button"></div>
+			<div class="top-text">
+				<p class="modal-title">
+					Поздравляем с первой важной датой
+					в жизни Вашего малыша!
+				</p>
+				<p>Ваша новость добавлена в очередь на модерацию.Одобрение может
+					занять пару часов. Проведите это бесценное время с малышом! :)</p>
+				<p>Ссылка на публикацию придет Вам на е-мейл или на указанный
+					номер телефона. Модерация работает с 10.00 до 24.00.
+					Если вы отправили заявку в нерабочее время, то получите ссылку
+					на следующий день.</p>
+				<p>Делясь новостью, не забывайте про хэштег <br>
+					#babynews</p>
+			</div>
+			<div class="pack-mob-wrap clearfix">
+				<p class="pack-title">Нежная <br>забота<br> c первых<br> дней</p>
+				<img src="img/modal-pack.jpg" class="pack-mob">
+			</div>
+			<div class="bottom-text">
+				<a href="https://maminclub.kz/products/huggies-elite-soft/" target="_blank">
+					Узнайте больше о продуктах Huggies®,
+				созданных специально для новорожденных.</a>
+			</div>
+		</div>
+	</div>
+	<div id="welcome-modal" class="upload-rules modal-content welcome-modal">
+		<div class="image-wrap">
+			<div class="close-button"></div>
+			<img src="img/welcome.jpg" class="desktop">
+			<img src="img/welcome-mob.jpg" class="mobile">
 		</div>
 	</div>
 </div>

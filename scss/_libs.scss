@@ -40,3 +40,51 @@
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
 }
+
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+
+.box.has-advanced-upload {
+  border: 2px dashed #9c835c;
+  transition: .3s;
+}
+.box.has-advanced-upload .box__dragndrop {
+  display: inline;
+}
+.box.is-dragover {
+  background-color: white;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .preview-wrap {
+    display: block;
+    width: 100%;
+    height: 100%;
+    img {
+      max-width: 90%;
+      max-height: 250px;
+    }
+  }
+  input {
+    display: none;
+  }
+}
+.file-label {
+  color: #df3324;
+}
+
+.file-choose {
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}

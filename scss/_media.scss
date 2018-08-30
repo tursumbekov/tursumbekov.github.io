@@ -123,6 +123,40 @@
       }
     }
   }
+
+  .submit-success-40 {
+    .modal-wrap	{
+      background: #fff url("../img/40-mob.jpg") 50% 0 no-repeat;
+      background-size: contain;
+      max-width: 320px;
+      padding: 20px;
+    }
+    .top-text,
+    .bottom-text {
+      float: none;
+      width: 100%;
+      .modal-title {
+        font-size: 18px;
+        width: 50%;
+        margin-left: 37%;
+        margin-bottom: 60px;
+      }
+    }
+    .pack-mob-wrap {
+      display: block;
+      text-align: right;
+      padding: 10px 0;
+      .pack-title,
+      .pack-mob {
+        float: left;
+        width: 48%;
+        margin: 0;
+      }
+    }
+    .bottom-text {
+      padding-top: 0;
+    }
+  }
 }
 
 @media (max-width: 815px) {
@@ -246,7 +280,7 @@
   }
   .footer-inner {
     .welcome {
-      padding-top: 560px;
+      padding-top: 525px;
       .desc {
         width: 100%;
         text-align: left;
@@ -265,6 +299,9 @@
         width: 25px;
         height: 25px;
       }
+      .modal-title {
+        font-size: 22px;
+      }
     }
   }
   .upload-rules {
@@ -278,6 +315,18 @@
       padding: 18px 18px 20px;
       font-size: 24px;
       line-height: 24px;
+    }
+  }
+  .image-wrap {
+    .mobile {
+      display: block;
+    }
+    .desktop {
+      display: none;
+    }
+    .close-button {
+      width: 25px;
+      height: 25px;
     }
   }
 }
@@ -325,55 +374,10 @@
   }
   .footer-inner {
     .welcome {
-      padding-top: 520px;
+      padding-top: 505px;
       .footer-pack {
         top: 343px;
       }
     }
   }
 }
-
-/*==========  Desktop First  ==========*/
-//
-//// ≥1200px
-//@include media-breakpoint-down(lg) {
-//
-//}
-//
-//// ≥992px
-//@include media-breakpoint-down(md) {
-//
-//}
-//
-//// ≥768px
-//@include media-breakpoint-down(sm) {
-//
-//}
-//
-//// ≥576px
-//@include media-breakpoint-down(xs) {
-//
-//}
-//
-//
-///*==========  Mobile First  ==========*/
-//
-//// ≤576px
-//@include media-breakpoint-up(sm) {
-//
-//}
-//
-//// ≤768px
-//@include media-breakpoint-up(md) {
-//
-//}
-//
-//// ≤992px
-//@include media-breakpoint-up(lg) {
-//
-//}
-//
-//// ≤1200px
-//@include media-breakpoint-up(xl) {
-//
-//}
