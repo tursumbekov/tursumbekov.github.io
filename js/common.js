@@ -29,8 +29,9 @@ $(function() {
   //   }
   // }
 
-  $('.pre-hide').one('inview', function () {
+  $('.pre-hide, .pre-hide-top').one('inview', function () {
     $(this).removeClass('pre-hide');
+    $(this).removeClass('pre-hide-top');
   });
 
   var isAdvancedUpload = function() {

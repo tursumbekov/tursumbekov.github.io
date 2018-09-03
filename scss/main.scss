@@ -53,6 +53,7 @@ b, strong {
 	height: 950px;
 	background: url("../img/header.jpg") 50% 100% no-repeat;
 	background-size: cover;
+	transition: .5s;
 }
 
 .main-header {
@@ -172,6 +173,10 @@ b, strong {
 .pre-hide {
 	opacity: 0;
 	transform: translateX(-50px);
+}
+.pre-hide-top {
+	opacity: 0;
+	transform: translateY(50px);
 }
 .fieldset-block {
 	margin: 0 100px;
@@ -354,6 +359,9 @@ b, strong {
 			box-sizing: border-box;
 			border: none;
 		}
+		.submit {
+			margin-top: 20px;
+		}
 	}
 	.news-content {
 		padding: 40px;
@@ -417,6 +425,7 @@ b, strong {
 			float: left;
 			padding-top: 100px;
 			font-size: 22px;
+			transition: .3s;
 		}
 		.footer-pack {
 			display: block;
@@ -424,6 +433,7 @@ b, strong {
 			position: absolute;
 			top: 480px;
 			right: -50px;
+			transition: .3s;
 			img {
 				width: 100%;
 			}
