@@ -83,6 +83,11 @@ b, strong {
 		font-size: 33px;
 		line-height: 29px;
 		margin: 0;
+		cursor: pointer;
+		transition: .3s;
+		&:hover {
+			opacity: .85;
+		}
 	}
 }
 
@@ -337,7 +342,9 @@ b, strong {
 	.custom-radio {
 		color: #df3324;
 	}
-	.custom-radio-content {
+	.custom-radio-content,
+	.champion-content,
+	.year-content {
 		display: none;
 		label {
 			font-size: 18px;
@@ -362,6 +369,18 @@ b, strong {
 		.submit {
 			margin-top: 20px;
 		}
+	}
+	.champion-content {
+		float: left;
+		width: 100%;
+		input {
+			margin-top: 10px;
+		}
+	}
+	.year-content {
+		float: left;
+		width: 100%;
+		margin-top: 10px;
 	}
 	.news-content {
 		padding: 40px;
@@ -568,6 +587,98 @@ b, strong {
 
 button.mfp-close {
 	display: none;
+}
+
+.page-success {
+	.header-wrap {
+		display: flex;
+		align-items: center;
+		margin: 0 100px;
+		padding: 20px 0;
+	}
+	a {
+		color: inherit;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.nav-list {
+		.circle {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background: #000;
+			border-radius: 50%;
+			margin: 0 10px;
+		}
+	}
+	.logo {
+		margin-right: 40px;
+	}
+	.grid {
+		display: flex;
+		position: relative;
+		z-index: 100;
+	}
+	.success-image-wrap {
+		width: 45%;
+		margin-right: 80px;
+		img {
+			max-width: 100%;
+			border: 7px solid #fff;
+			border-radius: 7px;
+			box-sizing: border-box;
+		}
+	}
+	.link-to-main {
+		display: inline-block;
+		color: #f30b07;
+		border: 3px solid #f30b07;
+		font-size: 25px;
+		padding: 15px 30px;
+		border-radius: 7px;
+		text-decoration: none;
+		transition: .2s;
+		&:hover {
+			background: #f30b07;
+			color: #fff;
+		}
+	}
+	.download-result {
+		display: inline-block;
+		color: inherit;
+		vertical-align: middle;
+		font-size: 22px;
+		margin: 10px 0 30px;
+		&:hover {
+			text-decoration: none;
+		}
+		&:before {
+			display: inline-block;
+			vertical-align: middle;
+			border-radius: 50%;
+			margin-right: 15px;
+			content: '';
+			width: 50px;
+			height: 50px;
+			background: #f30b07 url("../img/download.png") 50% 50% no-repeat;
+			background-size: 50% 50%;
+			transition: .3s;
+		}
+		&:hover:before {
+			opacity: .8;
+		}
+	}
+	.results {
+		line-height: 1.2;
+	}
+	.wrapper {
+		padding-top: 0;
+	}
+	.fieldset-block.success-wrap {
+		margin-top: 0;
+		padding: 50px 70px 150px;
+	}
 }
 
 

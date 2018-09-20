@@ -1,37 +1,29 @@
 $(function() {
 
-  // $('.dropzone-area').dropzone({ url: "/file/post" });
-  // Dropzone.options.myDropzone= {
-  //   url: 'upload.php',
-  //   autoProcessQueue: false,
-  //   uploadMultiple: true,
-  //   parallelUploads: 5,
-  //   maxFiles: 1,
-  //   maxFilesize: 1,
-  //   acceptedFiles: 'image/*',
-  //   addRemoveLinks: true,
-  //   init: function() {
-  //     dzClosure = this; // Makes sure that 'this' is understood inside the functions below.
-  //
-  //     // for Dropzone to process the queue (instead of default form behavior):
-  //     document.getElementById("submit-all").addEventListener("click", function(e) {
-  //       // Make sure that the form isn't actually being sent.
-  //       e.preventDefault();
-  //       e.stopPropagation();
-  //       dzClosure.processQueue();
-  //     });
-  //
-  //     //send all the form data along with the files:
-  //     this.on("sendingmultiple", function(data, xhr, formData) {
-  //       formData.append("firstname", jQuery("#firstname").val());
-  //       formData.append("lastname", jQuery("#lastname").val());
-  //     });
-  //   }
-  // }
+  $('.magnific-link').magnificPopup({
+    removalDelay: 300,
+    mainClass: 'mfp-fade'
+  });
+
+  $('.close-button').on('click', function () {
+    $.magnificPopup.close();
+  });
+
+  $('.magnific-link[href="#welcome-modal"]').click();
 
   $('.pre-hide, .pre-hide-top').one('inview', function () {
     $(this).removeClass('pre-hide');
     $(this).removeClass('pre-hide-top');
+  });
+
+  $('.header-share').on('click', function() {
+    $('html, body').stop().animate({
+      scrollTop: $('#instructions').offset().top
+    }, 1000);
+  });
+
+  $('[data-toggle="datepicker"]').datepicker({
+    format: 'dd.mm.YYYY'
   });
 
   var isAdvancedUpload = function() {
@@ -44,14 +36,6 @@ $(function() {
   if (isAdvancedUpload) {
     $form.addClass('has-advanced-upload');
   }
-
-  // function readURL(input) {
-  //   var reader = new FileReader();
-  //   console.log('input', e.target.result);
-  //   $('#blah').attr('src', e.target.result);
-  //
-  //   reader.readAsDataURL(input.files[0]);
-  // }
 
   if (isAdvancedUpload) {
 
@@ -80,15 +64,6 @@ $(function() {
     });
   }
 
-  $('.magnific-link').magnificPopup({
-    removalDelay: 300,
-    mainClass: 'mfp-fade'
-  });
-
-  $('.close-button').on('click', function () {
-    $.magnificPopup.close();
-  });
-
   var declOfNum = (function(){
     var cases = [2, 0, 1, 1, 1, 2];
     var declOfNumSubFunction = function(titles, number){
@@ -106,6 +81,10 @@ $(function() {
     }
   })();
 
+  $('#main-form').on('keyup', function () {
+    $('#main-form').change();
+  });
+
   $('#main-form').on('change', function () {
     var name = $('#name').val() ? $('#name').val() : 'Имя Фамилия';
     var petName = $('#pet_name').val() ? $('#pet_name').val() : 'Имя';
@@ -116,6 +95,9 @@ $(function() {
 
     var customTitle;
     var customDesc;
+    var circles;
+    var eventAddress;
+    var eventDate;
 
     if (checkedAchiv === 20) {
       $('.custom-radio-content').slideDown();
@@ -124,6 +106,20 @@ $(function() {
     } else {
       $('.custom-radio-content').slideUp();
     }
+    if (checkedAchiv === 11) {
+      $('.champion-content').slideDown();
+      circles = $('#circles').val();
+    } else {
+      $('.champion-content').slideUp();
+    }
+    if (checkedAchiv === 2) {
+      eventAddress = $('#event-address').val();
+      eventDate = $('#event-date').val();
+      $('.year-content').slideDown();
+    } else {
+      $('.year-content').slideUp();
+    }
+
     if (age % 12 === 0) {
       var year = age / 12;
       var end = '';
@@ -144,7 +140,7 @@ $(function() {
         petName + ' СДЕЛАЛ ПЕРВЫЙ ШАГ В БУДУЩЕЕ\n<br>' +
         name + ' (' + age + ' из г. ' + city + ') начал ходить. Исследователь не сидит на месте — впереди миллионы новых открытий.',
         petName + ' ОТМЕЧАЕТ ГОДИК\n<br>' +
-        name + ' (' + age + ' из г. ' + city + ') устраивает праздник по случаю своего первого дня рождения и приглашает Вас DD.MM.2018 в HH.ММ в Место!',
+        name + ' (' + age + ' из г. ' + city + ') устраивает праздник по случаю своего первого дня рождения и приглашает Вас ' + eventDate + ' в ' + eventAddress + '!',
         petName + ' ОТПРАВИЛСЯ В КРУГОСВЕТНОЕ ПУТЕШЕСТВИЕ\n<br>' +
         name + ' (' + age + ', из г. ' + city + ') прополз детскую. Путешественник не намерен останавливаться — его ждет весь мир! \n',
         petName + ' ПОКОРИЛ КАЗНЕТ!\n<br>' +
@@ -162,7 +158,7 @@ $(function() {
         petName + ' В КНИГЕ РЕКОРДОВ ГИННЕСА\n<br>' +
         name + ' (' + age + ' из г. ' + city + ') может попасть в Книгу Рекордов Гиннеса как самый юный кулинар на планете!',
         petName + ' — НОВЫЙ ЧЕМПИОН! \n<br>' +
-        name + ' (' + age + ', из г. ' + city + ') побил рекорд в познании мира. Имя (количество) раз прополз комнату. Домашний Олимп взят!\n',
+        name + ' (' + age + ', из г. ' + city + ') побил рекорд в познании мира. ' + petName + ' ' + circles + ' раз прополз комнату. Домашний Олимп взят!\n',
         petName + ' ВЛЮБЛЕН\n<br>' +
         name + ' (' + age + ' из г. ' + city + ') по-настоящему влюблен. Предметом любви стал самый прекрасный человек — мама!',
         petName + ' ОТМЕЧАЕТ ПЕРВУЮ ВАЖНУЮ ДАТУ\n<br>' +
@@ -186,7 +182,7 @@ $(function() {
         petName + ' СДЕЛАЛА ПЕРВЫЙ ШАГ В БУДУЩЕЕ\n<br>' +
         name + ' (' + age + ', из г. ' + city + ') начала ходить. Исследовательница не сидит на месте — впереди миллионы новых открытий. \n',
         petName + ' ОТМЕЧАЕТ ГОДИК\n<br>' +
-        name + ' (' + age + ' из г. ' + city + ') устраивает праздник по случаю своего первого дня рождения и приглашает Вас DD.MM.2018 в HH.ММ в Место!',
+        name + ' (' + age + ' из г. ' + city + ') устраивает праздник по случаю своего первого дня рождения и приглашает Вас ' + eventDate + ' в ' + eventAddress + '!',
         petName + ' ОТПРАВИЛАСЬ В КРУГОСВЕТНОЕ ПУТЕШЕСТВИЕ\n<br>' +
         name + ' (' + age + ', из г. ' + city + ') проползла детскую. Путешественница не намерена останавливаться — ее ждет весь мир! \n',
         petName + ' ПОКОРИЛА КАЗНЕТ!\n<br>' +
@@ -204,7 +200,7 @@ $(function() {
         petName + ' В КНИГЕ РЕКОРДОВ ГИННЕСА\n<br>' +
         name + ' (' + age + ' из г. ' + city + ') может попасть в Книгу Рекордов Гиннеса как самый юный кулинар на планете!',
         petName + ' — НОВЫЙ ЧЕМПИОН! \n<br>' +
-        name + ' (' + age + ', из г. ' + city + ') побила рекорд в познании мира. Имя (количество) раз проползла комнату. Домашний Олимп взят!\n',
+        name + ' (' + age + ', из г. ' + city + ') побила рекорд в познании мира. ' + petName + ' ' + circles + ' раз проползла комнату. Домашний Олимп взят!\n',
         petName + ' ВЛЮБЛЕНА\n<br>' +
         name + ' (' + age + ' из г. ' + city + ') по-настоящему влюблена. Предметом любви стал самый прекрасный человек — мама!',
         petName + ' ОТМЕЧАЕТ ПЕРВУЮ ВАЖНУЮ ДАТУ\n<br>' +
