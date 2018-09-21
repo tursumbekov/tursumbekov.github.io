@@ -164,7 +164,7 @@
 							<div class="box dropzone-area">
 								<div class="box__input">
 									<img id="output">
-									<label for="file" class="file-label"><span class="file-choose">Выберите файл</span><span class="box__dragndrop"> или перетащите сюда</span>.</label>
+									<label for="file" class="file-label"><span class="file-choose">Выберите фото</span><span class="box__dragndrop"> или перетащите сюда</span>.</label>
 									<br>
 									<a class="magnific-link" href="#upload-rules">требования к фотографии</a>
 								</div>
@@ -190,22 +190,11 @@
 								</label>
 
 								<label class="radio field">
-									<input type="radio" name="achievement" value="2">
+									<input type="radio" name="achievement" value="12">
 									<span class="radio-value">
-										Отмечает годик
+										Влюблен
 									</span>
 								</label>
-
-								<div class="year-content">
-									<label for="event-address">
-										Mесто проведения мероприятия
-									</label>
-									<input id="event-address" type="text" class="input form-control" placeholder="Ресторан «Винни-Пух»">
-									<label for="event-date">
-										Дата
-									</label>
-									<input id="event-date" class="input form-control" data-toggle="datepicker">
-								</div>
 
 								<label class="radio field">
 									<input type="radio" name="achievement" value="3">
@@ -264,31 +253,6 @@
 								</label>
 
 								<label class="radio field">
-									<input type="radio" name="achievement" value="12">
-									<span class="radio-value">
-										Влюблен
-									</span>
-								</label>
-
-								<label class="radio field">
-									<input type="radio" name="achievement" value="11">
-									<span class="radio-value">
-										Новый чемпион!
-									</span>
-								</label>
-
-								<div class="champion-content">
-									<input id="circles" type="number" class="input form-control" placeholder="Введите число кругов, которое прополз Ваш малыш">
-								</div>
-
-								<label class="radio field">
-									<input type="radio" name="achievement" value="13">
-									<span class="radio-value accent">
-										Отмечает первую важную дату
-									</span>
-								</label>
-
-								<label class="radio field">
 									<input type="radio" name="achievement" value="14">
 									<span class="radio-value">
 										Открыл секрет счастья
@@ -331,6 +295,42 @@
 								</label>
 
 								<label class="radio field custom-radio">
+									<input type="radio" name="achievement" value="13">
+									<span class="radio-value">
+										Отмечает первую важную дату - 40 дней!
+									</span>
+								</label>
+
+								<label class="radio field custom-radio">
+									<input type="radio" name="achievement" value="11">
+									<span class="radio-value">
+										Новый чемпион!
+									</span>
+								</label>
+
+								<div class="champion-content">
+									<input id="circles" type="number" class="input form-control" placeholder="Введите число кругов, которое прополз Ваш малыш">
+								</div>
+
+								<label class="radio field custom-radio">
+									<input type="radio" name="achievement" value="2">
+									<span class="radio-value">
+										Отмечает годик
+									</span>
+								</label>
+
+								<div class="year-content">
+									<label for="event-address">
+										Mесто проведения мероприятия
+									</label>
+									<input id="event-address" type="text" class="input form-control" placeholder="Ресторан «Винни-Пух»">
+									<label for="event-date">
+										Дата
+									</label>
+									<input id="event-date" class="input form-control" data-toggle="datepicker">
+								</div>
+
+								<label class="radio field custom-radio">
 									<input type="radio" name="achievement" value="20">
 									<span class="radio-value">
 										Свой вариант
@@ -365,6 +365,11 @@
 									</label>
 									<input id="address" type="text" class="input form-control" placeholder="Введите номер телефона или почту">
 								</div>
+							</div>
+
+							<div class="agree-box">
+								<input type="checkbox" name="agree" value="1" required>
+								Я ознакомлен/а с правилами участия
 							</div>
 
 							<div class="button-wrap">
@@ -490,6 +495,9 @@
 			<div class="close-button"></div>
 			<img src="img/welcome.jpg" class="desktop">
 			<img src="img/welcome-mob.jpg" class="mobile">
+			<div class="buttons-wrap">
+
+			</div>
 		</div>
 	</div>
 </div>

@@ -258,7 +258,7 @@ b, strong {
 				input {
 					display: none;
 					&:checked + .radio-value {
-						background: #fff;
+						background: #ebcb9b;
 					}
 				}
 				.radio-value {
@@ -307,7 +307,7 @@ b, strong {
 			input {
 				display: none;
 				&:checked + .radio-value {
-					background: #fff;
+					background: #ebcb9b;
 				}
 			}
 			&-value {
@@ -390,6 +390,11 @@ b, strong {
 		line-height: 1.2;
 		margin-bottom: 30px;
 		border-radius: 7px;
+	}
+	.agree-box {
+		margin-bottom: 30px;
+		position: relative;
+		z-index: 100;
 	}
 	.button-wrap {
 		height: 63px;
@@ -584,6 +589,13 @@ b, strong {
 		width: 100%;
 	}
 }
+
+//.welcome-modal {
+//	.image-wrap {
+//		border-radius: 14px;
+//		background: #fff;
+//	}
+//}
 
 button.mfp-close {
 	display: none;
