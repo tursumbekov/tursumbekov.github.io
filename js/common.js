@@ -5,7 +5,7 @@ $(function() {
     mainClass: 'mfp-fade'
   });
 
-  $('.close-button').on('click', function () {
+  $('.close-button, #hide-welcome').on('click', function () {
     $.magnificPopup.close();
   });
 

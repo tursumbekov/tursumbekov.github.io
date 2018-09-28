@@ -161,15 +161,23 @@
 								</div>
 							</div>
 
-							<div class="box dropzone-area">
-								<div class="box__input">
-									<img id="output">
-									<label for="file" class="file-label"><span class="file-choose">Выберите фото</span><span class="box__dragndrop"> или перетащите сюда</span>.</label>
-									<br>
-									<a class="magnific-link" href="#upload-rules">требования к фотографии</a>
+							<div class="row">
+								<div class="col-md-3" style="text-align: center; margin-bottom: 20px;">
+									<img src="img/baby-upload.jpg" alt="" style="max-width: 100%">
 								</div>
-								<input class="box__file" type="file" name="files" id="file" />
+								<div class="col-md-8">
+									<div class="box dropzone-area">
+										<div class="box__input">
+											<img id="output">
+											<label for="file" class="file-label"><span class="file-choose">Выберите фото</span><span class="box__dragndrop"> или перетащите сюда</span>.</label>
+											<br>
+											<a class="magnific-link" href="#upload-rules">требования к фотографии</a>
+										</div>
+										<input class="box__file" type="file" name="files" id="file" />
+									</div>
+								</div>
 							</div>
+
 						</div>
 
 						<div class="fieldset-block pre-hide achievements">
@@ -360,10 +368,38 @@
 							</div>
 							<div class="field-row clearfix">
 								<div class="field">
-									<label for="address">
+									<label for="email">
 										Куда выслать ссылку на новость?
 									</label>
-									<input id="address" type="text" class="input form-control" placeholder="Введите номер телефона или почту">
+									<input id="email" type="email" class="input form-control" placeholder="Введите почту">
+								</div>
+								<div class="field field-phone">
+									<label for="phone">
+										Или
+									</label>
+									<div class="phone-wrap">
+										<select name="mobile-operator" class="select form-control">
+											<option value="8700">8700</option>
+											<option value="8701">8701</option>
+											<option value="8702">8702</option>
+											<option value="8705">8705</option>
+											<option value="8707">8707</option>
+											<option value="8708">8708</option>
+											<option value="8747">8747</option>
+											<option value="8771">8771</option>
+											<option value="8775">8775</option>
+											<option value="8776">8776</option>
+											<option value="8777">8777</option>
+											<option value="8778">8778</option>
+											<option value="8750">8750</option>
+											<option value="8751">8751</option>
+											<option value="8760">8760</option>
+											<option value="8762">8762</option>
+											<option value="8763">8763</option>
+											<option value="8764">8764</option>
+										</select>
+										<input id="phone" type="text" maxlength="7" class="input form-control" placeholder="Введите номер телефона">
+									</div>
 								</div>
 							</div>
 
@@ -493,10 +529,15 @@
 	<div id="welcome-modal" class="upload-rules modal-content welcome-modal">
 		<div class="image-wrap">
 			<div class="close-button"></div>
-			<img src="img/welcome.jpg" class="desktop">
+			<img src="img/welcome2.jpg" class="desktop">
 			<img src="img/welcome-mob.jpg" class="mobile">
 			<div class="buttons-wrap">
-
+				<div class="button-wrap">
+					<a href="https://maminclub.kz/products/trus-huggies-elite-soft/" class="button" target="_blank">Узнать подробнее о продукте</a>
+				</div>
+				<div class="button-wrap">
+					<button class="button" id="hide-welcome">Продолжить создание своей новости</button>
+				</div>
 			</div>
 		</div>
 	</div>
